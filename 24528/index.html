@@ -61,6 +61,47 @@ section{margin-top:28px}
 .contact .nm{font-family:var(--display);font-size:28px;font-weight:800;line-height:1}
 .cta2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 footer{margin:28px 0 calc(28px + env(safe-area-inset-bottom))}
+.pricebar{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-top:14px}
+.pricebar .price{margin:0}
+.status{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#22461C;background:#E9F1E6;padding:4px 8px;font-weight:600;white-space:nowrap}
+.ohrow{display:flex;justify-content:space-between;font-family:var(--display);font-size:21px;letter-spacing:.03em;padding:4px 0;border-bottom:1px solid #2c2a26}
+.ohrow span{color:#cfc6b6;font-weight:600}.ohrow b{font-weight:700}
+.ohcal{display:inline-block;margin-top:10px;color:var(--gold);font-weight:600;text-decoration:none;font-size:14px}
+.eyebrow{font-family:var(--display);font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);font-size:14px;margin:0 0 6px}
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hl div{background:var(--card);border:1px solid var(--line);padding:14px}
+.hl b{display:block;font-family:var(--display);font-weight:800;font-size:34px;line-height:1;color:var(--gold-d)}
+.hl span{display:block;font-family:var(--display);font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+.hl p{margin:6px 0 0;font-size:13.5px;line-height:1.45;color:#3D3830}
+.full{margin:28px calc(-1*max(18px,env(safe-area-inset-left))) 0;position:relative}
+.full img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.full figcaption{font-size:12px;color:var(--muted);padding:6px max(18px,env(safe-area-inset-left)) 0}
+.bars{display:grid;gap:8px;margin-top:6px}
+.bar{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.bar i{display:block;height:34px;background:var(--line);position:relative}
+.bar i::before{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--gold)}
+.bar.avg i::before{background:#CFC4AE}
+.bar i b{position:relative;font-style:normal;font-family:var(--display);font-size:18px;color:var(--ink);line-height:34px;padding-left:10px}
+.floor h4{font-family:var(--display);font-size:19px;text-transform:uppercase;letter-spacing:.04em;color:var(--gold-d);margin:12px 0 4px}
+.floor ul{margin:0;padding-left:18px;font-size:15px}.floor li{margin:4px 0}
+.nb{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.nb b{display:block;font-family:var(--display);font-size:22px;line-height:1.05}
+.nb span{font-size:12.5px;color:#3D3830;line-height:1.35;display:block;margin-top:2px}
+.schools{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.schools .eyebrow{grid-column:1/-1}
+.schools div{border-top:2px solid var(--gold);padding-top:6px;font-family:var(--display);font-weight:700;font-size:19px}
+.schools div span{display:block;font-family:var(--body);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.agentcard{display:flex;gap:14px;align-items:center;border-top:2px solid var(--gold);padding-top:16px;margin-bottom:12px}
+.headshot{width:84px;height:104px;object-fit:cover;object-position:center 20%;flex-shrink:0}
+.agentcard .nm{font-family:var(--display);font-size:30px;font-weight:800;line-height:1}
+.agentcard .rl{color:var(--gold-d);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;margin:3px 0 6px}
+.ps{display:grid;gap:10px}
+.ps article{display:grid;grid-template-columns:96px 1fr;gap:12px;background:var(--card);border:1px solid var(--line);padding:10px;align-items:center}
+.ps article img{width:96px;height:72px;object-fit:cover}
+.ps h4{margin:0;font-family:var(--display);font-size:19px;line-height:1.1}
+.ps p{margin:2px 0 0;font-size:13px;color:#3D3830}
+.ps .side{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-d);font-weight:700}
+@media (max-width:420px){.bar{grid-template-columns:96px 1fr}.nb{grid-template-columns:1fr}.hl b{font-size:30px}}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -89,69 +130,113 @@ footer{margin:28px 0 calc(28px + env(safe-area-inset-bottom))}
 
 <!-- Step 2: the listing -->
 <div id="listing" hidden>
-<div class="price">$1,328,000</div>
+<div class="pricebar"><div class="price">$1,328,000</div><div class="status">Active · MLS# 2594648</div></div>
 <div class="specs">
 <div><b>3+loft</b><span>Beds</span></div><div><b>2.25</b><span>Baths</span></div><div><b>2,490</b><span>Sq ft</span></div><div><b>10,904</b><span>Sf lot</span></div>
 </div>
 
 <div class="oh">
 <h3>Open house</h3>
-<p>Fri 10/16 · 4:30–6:30 PM</p>
-<p>Sat &amp; Sun 10/17–18 · 12–2 PM</p>
+<div class="ohrow"><span>Fri 10/16</span><b>4:30–6:30 PM</b></div>
+<div class="ohrow"><span>Sat 10/17</span><b>12–2 PM</b></div>
+<div class="ohrow"><span>Sun 10/18</span><b>12–2 PM</b></div>
+<a class="ohcal" href="openhouse.ics" download>+ Add to my calendar</a>
 </div>
 
 <section>
-<h2>What's new</h2>
-<ul class="list">
-<li>All-new kitchen cabinets and countertops, new cooktop</li>
-<li>Island with breakfast bar, bay window over the sink</li>
-<li>2026 roof · 2026 interior and exterior paint</li>
-<li>2021 flooring · 2023 and 2024 bath countertops</li>
-<li>Vaulted ceilings, two fireplaces, upstairs loft</li>
-<li>10,904 sf lot, about 1.6× the Klahanie average*, with fruit trees, garden space and a shed</li>
-</ul>
+<p class="eyebrow">Why this home</p>
+<div class="hl">
+<div><b>2026</b><span>New kitchen</span><p>All-new cabinets and countertops, new cooktop. Island with breakfast bar, bay window over the sink.</p></div>
+<div><b>2026</b><span>New roof</span><p>Replaced this year, along with fresh interior and exterior paint.</p></div>
+<div><b>1.6&times;</b><span>The Klahanie lot</span><p>10,904 sf with fruit trees, garden space and a shed. Larger than 47 of 48 recent Klahanie listings.*</p></div>
+<div><b>$100</b><span>HOA / month</span><p>Includes Klahanie's heated pools and sports courts, private to residents.</p></div>
+</div>
+</section>
+
+<figure class="full"><img src="p/kitchen-2.jpg" alt="Kitchen with island and breakfast bar" loading="lazy"><figcaption>The new kitchen · island with breakfast bar</figcaption></figure>
+
+<section>
+<p class="eyebrow">The lot</p>
+<h2>One of Klahanie's largest yards</h2>
+<div class="bars">
+<div class="bar"><span>This home</span><i style="--w:100%"><b>10,904 sf</b></i></div>
+<div class="bar avg"><span>Klahanie average*</span><i style="--w:63.4%"><b>6,908 sf</b></i></div>
+</div>
+<figure style="margin:12px 0 0"><img src="p/backyard.jpg" alt="Backyard and deck" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover"></figure>
 </section>
 
 <section>
-<h2>Photos</h2>
-<div class="gal">
-<figure class="wide"><img src="p/kitchen-2.jpg" alt="Kitchen and breakfast bar" loading="lazy"><figcaption>New kitchen</figcaption></figure>
-<figure><img src="p/kitchen-3.jpg" alt="Kitchen toward the refrigerator" loading="lazy"><figcaption>Kitchen</figcaption></figure>
-<figure><img src="p/kitchen-4.jpg" alt="Kitchen and eating nook" loading="lazy"><figcaption>Eating nook</figcaption></figure>
-<figure class="wide"><img src="p/exterior.jpg" alt="Front exterior" loading="lazy"><figcaption>Exterior · AI-enhanced image</figcaption></figure>
+<p class="eyebrow">Inside</p>
+<h2>Room by room</h2>
+<div class="floor">
+<h4>Main level</h4>
+<ul>
+<li><b>Living room</b> with vaulted ceiling and fireplace, open to the loft above</li>
+<li><b>Formal dining</b> off the entry</li>
+<li><b>Kitchen</b>: new cabinets, countertops and cooktop; island with breakfast bar; bay window</li>
+<li><b>Family room</b> with second fireplace and French doors to the deck</li>
+<li>Powder room, laundry room, attached 2-car garage</li>
+</ul>
+<h4>Upper level</h4>
+<ul>
+<li><b>Primary suite</b> with walk-in closet and soaking tub</li>
+<li><b>Two more bedrooms</b>, all three on one floor</li>
+<li><b>Full bath</b> with subway-tile shower</li>
+<li><b>Loft</b> for an office, homework space or guest area</li>
+</ul>
+</div>
+<div class="gal" style="margin-top:12px">
 <figure><img src="p/living.jpg" alt="Living room" loading="lazy"><figcaption>Living room</figcaption></figure>
 <figure><img src="p/family.jpg" alt="Family room" loading="lazy"><figcaption>Family room</figcaption></figure>
+<figure><img src="p/kitchen-3.jpg" alt="Kitchen toward the refrigerator" loading="lazy"><figcaption>Kitchen</figcaption></figure>
+<figure><img src="p/kitchen-4.jpg" alt="Kitchen and eating nook" loading="lazy"><figcaption>Eating nook</figcaption></figure>
 <figure><img src="p/primary.jpg" alt="Primary suite" loading="lazy"><figcaption>Primary suite</figcaption></figure>
 <figure><img src="p/loft.jpg" alt="Loft" loading="lazy"><figcaption>Loft</figcaption></figure>
-<figure class="wide"><img src="p/backyard.jpg" alt="Backyard and deck" loading="lazy"><figcaption>Backyard</figcaption></figure>
+<figure class="wide"><img src="p/exterior.jpg" alt="Front exterior" loading="lazy"><figcaption>Exterior · AI-enhanced image</figcaption></figure>
 </div>
 </section>
 
 <section>
-<h2>The home</h2>
+<p class="eyebrow">At a glance</p>
 <div class="facts">
 <div><span>Bedrooms</span>3 + loft</div><div><span>Baths</span>2.25</div>
 <div><span>Living area</span>2,490 sf</div><div><span>Lot</span>10,904 sf</div>
 <div><span>Built</span>1987</div><div><span>Stories</span>2</div>
 <div><span>Garage</span>2-car attached</div><div><span>HOA</span>$100 / month</div>
-<div><span>Schools</span>Issaquah SD*</div><div><span>MLS#</span>2594648</div>
+<div><span>Flooring</span>2021</div><div><span>Bath counters</span>2023–24</div>
 </div>
 <p class="fine" style="margin-top:8px">No central A/C. Pre-inspection report available on request.</p>
 </section>
 
 <section>
-<h2>Living in Klahanie</h2>
+<p class="eyebrow">Living in Klahanie</p>
+<h2>Walk to Yellow Lake</h2>
 <div class="map"><img src="p/map.jpg" alt="Map of Klahanie showing the home, Yellow Lake, pools and courts" loading="lazy"></div>
-<div class="res"><b>Residents only</b><span>Klahanie's heated pools and sports courts are private to Klahanie homeowners, included in the $100/mo HOA. The Yellow Lake trail loop is about 0.3 mi away (straight line).</span></div>
+<div class="res"><b>Residents only</b><span>Klahanie's heated pools and sports courts are private to Klahanie homeowners, included in the $100/mo HOA.</span></div>
+<div class="nb">
+<div><b>0.3 mi</b><span>to the Yellow Lake trail loop (straight line)</span></div>
+<div><b>Klahanie</b><span>Shopping Center for groceries and coffee</span></div>
+<div><b>I-90</b><span>access to Bellevue, Redmond and Seattle</span></div>
+</div>
+<div class="schools">
+<p class="eyebrow" style="margin-top:14px">Issaquah School District*</p>
+<div><span>Elementary</span>Endeavour</div><div><span>Middle</span>Beaver Lake</div><div><span>High</span>Skyline</div>
+</div>
 </section>
 
-<section class="contact">
-<div><div class="nm">Ryan Xu</div><div style="color:var(--gold-d);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase">Broker · Xceed Realty</div>
-<div>425-448-4960 · ryan@xceedwa.com</div></div>
-<div class="cta2"><a class="btn" href="tel:+14254484960">Call</a><a class="btn ghost" href="sms:+14254484960">Text</a></div>
-</section>
+<section id="pastsales" hidden></section>
 
-<footer class="fine">*Klahanie average 6,908 sf: average lot of 48 Klahanie single-family homes on the market in the past 6 months; this lot is larger than 47 of them (NWMLS, Apr–Oct 2026). Schools: Endeavour Elementary, Beaver Lake Middle, Skyline High; buyer to verify. Exterior photo is AI-enhanced (lighting and sky). Map data © OpenStreetMap contributors. Information deemed reliable, not guaranteed. WA Real Estate Broker License #20108301. Equal Housing Opportunity.</footer>
+<section class="agentcard">
+<img src="p/ryan.jpg" alt="Ryan Xu" class="headshot">
+<div>
+<div class="nm">Ryan Xu</div>
+<div class="rl">Broker · Xceed Realty</div>
+<div>425-448-4960<br>ryan@xceedwa.com</div>
+</div>
+</section>
+<div class="cta2"><a class="btn" href="tel:+14254484960">Call Ryan</a><a class="btn ghost" href="sms:+14254484960?&body=Hi%20Ryan%2C%20I%27m%20interested%20in%2024528%20SE%2043rd%20Pl.">Text Ryan</a></div>
+
+<footer class="fine"><img src="p/logo.png" alt="Xceed Realty" style="display:block;height:30px;margin:24px 0 10px">*Klahanie average 6,908 sf: average lot of 48 Klahanie single-family homes on the market in the past 6 months; this lot is larger than 47 of them (NWMLS, Apr–Oct 2026). Schools per Issaquah School District boundaries; buyer to verify. Exterior photo is AI-enhanced (lighting and sky). Map data © OpenStreetMap contributors. Information deemed reliable, not guaranteed. WA Real Estate Broker License #20108301. Equal Housing Opportunity.</footer>
 </div>
 </main>
 <script>
